@@ -48,10 +48,23 @@
 				      <li class="border-menu-mail"><?php $key="content"; echo get_post_meta($post->ID, $key, true); ?></li>
 				      <?php endwhile; wp_reset_postdata(); ?>
 				    </ul>
-				    <ul class="nav navbar-nav navbar-color ml-auto">
-				      <li class="border-menu-mail"><a href="#">My account</a></li>
-				      <li class="border-menu-mail"><a href="#">Check out</a></li>
-				    </ul>
+
+				    <?php
+						if ( is_user_logged_in() ) {
+							global $current_user;
+							get_currentuserinfo();
+
+							echo '<ul id="mem" class="clearfix nav navbar-nav navbar-color ml-auto">
+							            <li class="border-menu-mail"><a href="http://localhost/importchina/my-account">'.$current_user->display_name.'</a></li>
+							            <li class="border-menu-mail"><a href="'. wp_logout_url( get_permalink( woocommerce_get_page_id( 'myaccount' ) ) ) .'">Logout</a></li>
+							        </ul>';
+							} else {
+							echo '<ul id="mem" class="clearfix nav navbar-nav navbar-color ml-auto">
+							            <li class="border-menu-mail"><a href="http://localhost/importchina/%E0%B9%80%E0%B8%82%E0%B9%89%E0%B8%B2%E0%B8%AA%E0%B8%B9%E0%B9%88%E0%B8%A3%E0%B8%B0%E0%B8%9A%E0%B8%9A/">Register</a></li>
+							            <li class="border-menu-mail"><a href="http://localhost/importchina/%E0%B9%80%E0%B8%82%E0%B9%89%E0%B8%B2%E0%B8%AA%E0%B8%B9%E0%B9%88%E0%B8%A3%E0%B8%B0%E0%B8%9A%E0%B8%9A/">Login</a></li>
+							        </ul>';
+							}
+					?>
 				</div>
 			</div>
 		</header>
@@ -89,17 +102,19 @@
 										</div>
 									</div>
 									<div class="col-xs-6 px-5px">
+										<a href="<?php echo wc_get_cart_url(); ?>">
 										<div class="icon-number-header">
-											<span>0</span>
+											<?php echo sprintf ( _n( '', '%d ', WC()->cart->get_cart_contents_count() ), WC()->cart->get_cart_contents_count() ); ?>
 										</div>
 										<div class="icon-content-head">
 											<p>My cart</p>
 										</div>
+										</a>
 									</div>
 								</div>
 							</a>
 						</div>
-						<div class="col-xs-5 float-right px-5px">
+<!-- 						<div class="col-xs-5 float-right px-5px">
 							<a href="#">
 								<div>
 									<div class="col-xs-6 px-5px">
@@ -117,7 +132,7 @@
 									</div>
 								</div>
 							</a>
-						</div>
+						</div> -->
 					</div>
 				</div>
 				

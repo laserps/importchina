@@ -25,7 +25,7 @@ jQuery( function( $ ) {
 
 		if ( $thisbutton.is( '.ajax_add_to_cart' ) ) {
 			if ( ! $thisbutton.attr( 'data-product_id' ) ) {
-				return true;
+				return false;
 			}
 
 			e.preventDefault();
@@ -100,8 +100,8 @@ jQuery( function( $ ) {
 		$button = typeof $button === 'undefined' ? false : $button;
 
 		if ( $button ) {
-			$button.removeClass( 'loading' );
-			$button.addClass( 'added' );
+			$button.addClass( 'loading' );
+			$button.removeClass( 'added' );
 
 			// View cart text.
 			if ( ! wc_add_to_cart_params.is_cart && $button.parent().find( '.added_to_cart' ).length === 0 ) {

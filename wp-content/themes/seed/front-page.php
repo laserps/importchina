@@ -97,9 +97,13 @@
 					  			<a href="#" class="icon-btu-hover"><i class="fas fa-sync-alt"></i></a>
 					  			<a href="#" class="icon-btu-hover"><i class="fas fa-phone-volume"></i></a>
 						  	</div>
-						  	<div class="overlay">
+						  	<div class="overlay">	
 
-						  		<button type="button" class="btn btn-add-cart ">ใส่ตะกร้า</button>
+						  		<a href="<?php echo esc_url( home_url( '/' ) ); ?> " data-quantity="1" data-product_id="<?php echo $product->id; ?>" 
+						  			class="button alt ajax_add_to_cart add_to_cart_button product_type_simple btn-add-cart" onClick="window.location.reload()">
+								    ใส่ตะกร้า
+								</a>
+						  		<!-- <button type="button" class="btn btn-add-cart">ใส่ตะกร้า</button> -->
 						  	</div>
 						  	<div class="sale-icon">
 						  			<?php 
@@ -218,7 +222,10 @@
 							  			<a href="#" class="icon-btu-hover"><i class="fas fa-phone-volume"></i></a>
 								  	</div>
 								  	<div class="overlay">
-								  		<button type="button" class="btn btn-add-cart">ใส่ตะกร้า</button>
+								  		<a href="<?php echo esc_url( home_url( '/' ) ); ?> " data-quantity="1" data-product_id="<?php echo $product->id; ?>" 
+								  			class="button alt ajax_add_to_cart add_to_cart_button product_type_simple btn-add-cart" onClick="window.location.reload()">
+										    ใส่ตะกร้า
+										</a>
 								  	</div>
 								  	<div class="sale-icon">
 								  		<?php 

@@ -21,21 +21,6 @@
 <?php else: ?>
 <!-- 	<div class="site-footer-space"></div> -->
 	<footer role="contentinfo">
-<!-- 		<div id="colophon" class="site-footer" >
-			<div class="content-page colophon">
-				<div class="row">
-					<div class="col-md-5">
-						<div class="newsletter-title">
-							<h3>
-								<span>Sign Up For Newsletters</span>
-							</h3>
-							<p>Be the First to Know. Sign up for newsletter today</p>
-						</div>
-					</div>
-					<div class="col-md-5"></div>
-				</div>
-			</div>
-		</div> -->
 		<div class="content-page colophon py-5">
 			<div class="row">
 				<div class="col-md-4">
@@ -52,8 +37,9 @@
 						<h3><span>Payment:</span></h3>
 					</div>
 					<div class="vc_single_image-wrapper   vc_box_border_grey">
-						<img width="286" height="23" src="wp-content/uploads/2019/02/payment-icon.png" class="vc_single_image-img attachment-full">
+						<img width="286" height="23" src="<?php echo esc_url( home_url( '/wp-content/uploads/2019/02/payment-icon.png' ) ); ?>" class="vc_single_image-img attachment-full">
 					</div>
+				<!-- 	http://localhost/importchina/wp-content/uploads/2019/02/payment-icon.png -->
 				</div>
 				<div class="col-md-4">
 					<div class="contact-footer">

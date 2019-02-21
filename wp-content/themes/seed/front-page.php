@@ -399,7 +399,7 @@
 				</div>
 			</div>
 			
-			<ul id="category-2">
+			<ul id="category-3">
 				<?php
 					$args = array(
 						'post_type' => 'product',

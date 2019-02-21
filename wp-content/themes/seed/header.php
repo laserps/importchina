@@ -55,12 +55,12 @@
 							get_currentuserinfo();
 
 							echo '<ul id="mem" class="clearfix nav navbar-nav navbar-color ml-auto">
-							            <li class="border-menu-mail"><a href="http://localhost/importchina/my-account">'.$current_user->display_name.'</a></li>
+							            <li class="border-menu-mail"><a href="'. wp_logout_url( get_permalink( woocommerce_get_page_id( 'myaccount' ) ) ) .'">'.$current_user->display_name.'</a></li>
 							            <li class="border-menu-mail"><a href="'. wp_logout_url( get_permalink( woocommerce_get_page_id( 'myaccount' ) ) ) .'">Logout</a></li>
 							        </ul>';
 							} else {
 							echo '<ul id="mem" class="clearfix nav navbar-nav navbar-color ml-auto">
-							            <li class="border-menu-mail"><a href="http://localhost/importchina/%E0%B9%80%E0%B8%82%E0%B9%89%E0%B8%B2%E0%B8%AA%E0%B8%B9%E0%B9%88%E0%B8%A3%E0%B8%B0%E0%B8%9A%E0%B8%9A/">Register</a></li>
+							            <li class="border-menu-mail"><a href="">Register</a></li>
 							            <li class="border-menu-mail"><a href="http://localhost/importchina/%E0%B9%80%E0%B8%82%E0%B9%89%E0%B8%B2%E0%B8%AA%E0%B8%B9%E0%B9%88%E0%B8%A3%E0%B8%B0%E0%B8%9A%E0%B8%9A/">Login</a></li>
 							        </ul>';
 							}

@@ -37,7 +37,7 @@
 						<h3><span>Payment:</span></h3>
 					</div>
 					<div class="vc_single_image-wrapper   vc_box_border_grey">
-						<img width="286" height="23" src="<?php echo esc_url( home_url( '/wp-content/uploads/2019/02/payment-icon.png' ) ); ?>" class="vc_single_image-img attachment-full">
+						<img width="286" height="23" src="<?php echo esc_url( home_url( '/wp-content/uploads/2019/02/payment-icon.png ' ) ); ?>" class="vc_single_image-img attachment-full">
 					</div>
 				<!-- 	http://localhost/importchina/wp-content/uploads/2019/02/payment-icon.png -->
 				</div>

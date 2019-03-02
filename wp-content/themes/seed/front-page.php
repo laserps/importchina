@@ -356,6 +356,13 @@
 					<div class="panel panel-default">
 					  <div class="panel-body">
 					  	<div class="row">
+					  		<div class="col-md-5 pl-5px">
+					  			<div class="fix-img-100">
+					  				<a href="<?php the_permalink(); ?>">
+					  					<img class="fix-img-cover" src="<?php the_post_thumbnail_url('full'); ?>">
+					  				</a>
+					  			</div>
+					  		</div>
 					  		<div class="col-md-7 pr-5px">
 					  			<div class="slide-category">
 							  		<a href="<?php the_permalink(); ?>" class="category-color">
@@ -374,13 +381,6 @@
 							  	<div class="color-red text-price">
 							  		<span><?php echo $price; echo $currency;?></span>
 							  	</div>
-					  		</div>
-					  		<div class="col-md-5 pl-5px">
-					  			<div class="fix-img-100">
-					  				<a href="<?php the_permalink(); ?>">
-					  					<img class="fix-img-cover" src="<?php the_post_thumbnail_url('full'); ?>">
-					  				</a>
-					  			</div>
 					  		</div>
 					  	</div>
 					  </div>
@@ -413,6 +413,13 @@
 					<div class="panel panel-default">
 					  <div class="panel-body">
 					  	<div class="row">
+					  		<div class="col-md-5 pl-5px">
+					  			<div class="fix-img-100">
+					  				<a href="<?php the_permalink(); ?>">
+					  					<img class="fix-img-cover" src="<?php the_post_thumbnail_url('full'); ?>">
+					  				</a>
+					  			</div>
+					  		</div>
 					  		<div class="col-md-7 pr-5px">
 					  			<div class="slide-category">
 							  		<a href="<?php the_permalink(); ?>" class="category-color">
@@ -432,13 +439,7 @@
 							  		<span><?php echo $price; echo $currency;?></span>
 							  	</div>
 					  		</div>
-					  		<div class="col-md-5 pl-5px">
-					  			<div class="fix-img-100">
-					  				<a href="<?php the_permalink(); ?>">
-					  					<img class="fix-img-cover" src="<?php the_post_thumbnail_url('full'); ?>">
-					  				</a>
-					  			</div>
-					  		</div>
+					  		
 					  	</div>
 					  </div>
 					</div>
